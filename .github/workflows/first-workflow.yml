@@ -1,9 +1,10 @@
 name: First Workflow
 
 on:
-  workflow_dispatch:
-  issues:
-    types: [opened]
+    push:
+        branches: [ main ]
+    pull_request: 
+        branches: [ main ]
 
 env:
     Developer: "Siya Khumalo"
