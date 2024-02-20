@@ -23,9 +23,9 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore Application/src/RazorPagesTestSample/RazorPagesTestSample.sln
     - name: Build
-      run: dotnet restore Application/src/RazorPagesTestSample/RazorPagesTestSample.sln --no-restore
+      run: dotnet build Application/src/RazorPagesTestSample/RazorPagesTestSample.sln --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test Application/src/RazorPagesTestSample.Tests/RazorPagesTestSample.Tests.sln --no-build --verbosity normal
 
       
       
