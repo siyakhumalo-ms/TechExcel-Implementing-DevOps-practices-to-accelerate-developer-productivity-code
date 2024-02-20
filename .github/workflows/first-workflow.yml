@@ -1,28 +1,14 @@
 name: First Workflow
 
-on:
-    push:
-        branches: [ main ]
-    pull_request: 
-        branches: [ main ]
-
-env:
-    Developer: "Siya Khumalo"
+on: 
+    workflow_dispatch:
 
 jobs:
-  job1:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Step 1
-      run: echo "Step 1 is complete ${{ env.Developer }}!"
-    - name: Step 2
-      run: echo "${{ env.Developer }} Step 2 is now complete!"
+    build:
+        runs-on: ubuntu-latest
 
-  job2:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Cowsays
-      uses: mscoutermarsh/cowsays-action@master
-      with:
-        text: "Ready for prod–ship it! ${{ env.Developer }}"
-        color: "magenta"
+        steps:
+        - uses: actions/checkout@v2
+
+        - name: Run a one-line script
+          run: echo Hello, world!
