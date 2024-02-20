@@ -19,7 +19,6 @@ jobs:
       run: echo "${{ env.Developer }} Step 2 is now complete!"
 
   job2:
-    needs: job1
     runs-on: ubuntu-latest
     steps:
     - name: Cowsays
