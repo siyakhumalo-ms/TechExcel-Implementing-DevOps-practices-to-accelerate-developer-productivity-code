@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Cowsays
-      uses: jessfraz/cowsay-action@master
+      uses: mscoutermarsh/cowsays-action@master
       with:
         text: "Ready for prod–ship it! ${{ env.Developer }}"
         color: "magenta"
