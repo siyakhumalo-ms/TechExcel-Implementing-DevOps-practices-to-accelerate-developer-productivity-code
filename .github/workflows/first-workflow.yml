@@ -21,4 +21,4 @@ jobs:
       uses: mscoutermarsh/cowsays-action@master
       with:
         text: "Ready for prod-ship it!"
-        color: yellow
+        color: red
