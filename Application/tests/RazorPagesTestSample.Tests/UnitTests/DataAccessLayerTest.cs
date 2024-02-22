@@ -20,7 +20,8 @@ namespace RazorPagesTestSample.Tests.UnitTests
                 await db.SaveChangesAsync();
 
                 // Act
-                var result = await db.GetMessagesAsync();
+                var result = string.Empty;
+                // var result = await db.GetMessagesAsync();
 
                 // Assert
                 var actualMessages = Assert.IsAssignableFrom<List<Message>>(result);
